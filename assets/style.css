@@ -14,7 +14,7 @@ body * {
     float: right;
 }
 
-.container, .choices {
+.container {
     padding: 100px 200px 50px 200px;
     text-align: center;
     font-weight: bold;
@@ -40,6 +40,7 @@ left: 40%;
     font-size: 16px;
     margin: 3px;
     border-radius: 5px;
+    width: 250px;
     
 }
 

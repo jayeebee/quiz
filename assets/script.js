@@ -2,6 +2,8 @@
 var startButton = document.getElementById('start-button')
 //the answer field, starts hidden will be show on click
 var questionContainerEl = document.getElementById('result')
+var questionEl = document.getElementById('question-bank')
+var answerEl = document.getElementById('choice')
 
 startButton.addEventListener('click', startGame);
 
@@ -25,24 +27,52 @@ function startGame() {
         timeleft -= 1;
     }, 1000);
 
-
     console.log('started')
 
+
+};
+
+
+function showQuestion() {
+    questionEl.innerText = questions.question
+    console.log("question maker")
 }
 
-
-
-
-
-
-
-/*
 var questions = [
-    new Question("_______ tag is an extension to HTML that can enclose any number of Javascript statements", ["<SCRIPT>", "<BODY>","<HEAD>", "<TITLE>"], "<SCRIPT>"),
-    new Question("Which built-in method adds one or more elements to the end of an array and returns the new length of the array?", ["last()", "put()", "push()", "None of the above"], "push()"),
-    new Question("Which built-in method returns the calling string value converted to upper case?", ["toUpperCase", "toUpper()","changeCase(case)", "None of the above"], "toUpperCase()"),
-    new Question("Which of the following function of String object combines the text of two strings and returns a new string?", ["add()", "merge()", "concat()", "append()"], "concat()"),
-    new Question("JavaScript is a ___ -side programming language.", ["Client", "Server", "Both", "Neither"], "Both")
-];
-
-*/
+    {
+    question: "_______ tag is an extension to HTML that can enclose any number of Javascript statements", 
+    answers: [
+        { text: '<SCRIPT>', correct: true }, 
+        { text: '<BODY>', correct: false },
+        { text: '<HEAD>', correct: false },
+        { text: '<TITLE>', correct: false}],
+    
+    
+    question: "Which built-in method adds one or more elements to the end of an array and returns the new length of the array?", 
+    answers: [
+        { text : 'last()', correct: false}, 
+        { text : 'put()', correct: false}, 
+        { text : 'push()', correct: true}, 
+        { text : 'None of the above', correct: false}], 
+    
+    question: "Which built-in method returns the calling string value converted to upper case?",
+    answers: [
+        { text : 'toUpperCase', correct: true},
+        { text : 'toUpper()', correct: false},
+        { text : 'changeCase(case)', correct: false},
+        { text : 'None of the above', correct: false}], 
+    
+    question: "Which of the following function of String object combines the text of two strings and returns a new string?", 
+    answers: [
+        { text : 'add()', correct: false},
+        { text : 'merge()', correct: false},
+        { text : 'concat()', correct: true},
+        { text : 'append()', correct: false}],
+    
+    question: "JavaScript is a ___ -side programming language.", 
+    answers: [
+        { text : 'Client',  correct: false},
+        { text : 'Server',  correct: false},
+        { text : 'Both',  correct: true},
+        { text : 'Neither', correct: false}]
+    }]
