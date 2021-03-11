@@ -1,0 +1,48 @@
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-text {
+    margin: auto;
+    text-align: center;
+}
+
+.timer {
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    float: right;
+}
+
+.container, .choices {
+    padding: 100px 200px 50px 200px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.result {
+position: relative;
+}
+
+.buttons {
+position: absolute;
+left: 40%;
+}
+
+.answer-1, .answer-2, .answer-3, .answer-4 {
+    background-color: #400080;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px;
+    border-radius: 5px;
+    
+}
+
+.answer-1:hover, .answer-2:hover, .answer-3:hover, .answer-4:hover {
+    background-color: #cc66ff;
+}
