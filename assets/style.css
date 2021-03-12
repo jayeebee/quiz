@@ -75,3 +75,17 @@ left: 40%;
     background-color: #cc66ff;
 }
 
+.high-score {
+    background-color: white;
+    color:  #cc66ff;
+    border: none;
+    text-decoration: none;
+    margin: 3px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.high-score:hover {
+    background-color: #400080;
+}
