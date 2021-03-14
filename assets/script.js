@@ -61,8 +61,7 @@ function startGame() {
         if(i === 5){
             window.alert('Quiz complete. Your score is ' + numCorrect)
             username = prompt('Please enter your name for high score');
-            localStorage.setItem("username", username);
-            localStorage.setItem("score", numCorrect);
+            localStorage.setItem("username", username +  '  ' + numCorrect);
     }
     } 
 )
@@ -84,7 +83,8 @@ function startGame() {
 
         if(i === 5){
             window.alert('Quiz complete. Your score is ' + numCorrect)
-            window.prompt ('Please enter your name for high score')
+            username = prompt('Please enter your name for high score');
+            localStorage.setItem("username", username +  '  ' + numCorrect);
     }
     } 
 )
@@ -105,7 +105,8 @@ function startGame() {
      
         if(i === 5){
             window.alert('Quiz complete. Your score is ' + numCorrect)
-            window.prompt ('Please enter your name for high score')
+            username = prompt('Please enter your name for high score');
+            localStorage.setItem("username", username +  '  ' + numCorrect);
     }
         } 
      
@@ -127,17 +128,11 @@ function startGame() {
  
         if(i === 5){
             window.alert('Quiz complete. Your score is ' + numCorrect)
-            window.prompt ('Please enter your name for high score')
+            username = prompt('Please enter your name for high score');
+            localStorage.setItem("username", username +  '  ' + numCorrect);
     }
- })
-        
-
-        
-             
-    
-
+ })     
     console.log('started')
-
 };
 
 
@@ -191,7 +186,5 @@ var questions = [
             { text : ' ',  correct: false},
             { text : ' ',  correct: true},
             { text : ' ', correct: false}]
-        }
-    
-
+    }
 ]
