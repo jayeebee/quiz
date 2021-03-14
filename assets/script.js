@@ -45,65 +45,96 @@ function startGame() {
     button0.addEventListener('click', function(){
         if(questions[i].answers[0].correct){
         window.alert('Correct')
+        i++;
         numCorrect++;
         console.log(numCorrect);
         } else  {timeLeft -= 5;
         window.alert('Incorrect') 
+        i++
         }   
         document.querySelector("#choice0").textContent=questions[i].answers[0].text;
         document.querySelector("#choice1").textContent=questions[i].answers[1].text;
         document.querySelector("#choice2").textContent=questions[i].answers[2].text;
         document.querySelector("#choice3").textContent=questions[i].answers[3].text;
         document.querySelector("#question-ask").textContent=questions[i].question;
-        i++;
+
+        if(i === 5){
+            window.alert('Quiz complete. Your score is ' + numCorrect)
+            username = prompt('Please enter your name for high score');
+            localStorage.setItem("username", username);
+            localStorage.setItem("score", numCorrect);
+    }
     } 
-    )
+)
 
     button1.addEventListener('click', function(){
         if(questions[i].answers[1].correct){
         window.alert('Correct')
+        i++
         numCorrect++;
         } else  {timeLeft -= 5;
         window.alert('Incorrect') 
+        i++
         }
         document.querySelector("#choice0").textContent=questions[i].answers[0].text;
         document.querySelector("#choice1").textContent=questions[i].answers[1].text;
         document.querySelector("#choice2").textContent=questions[i].answers[2].text;
         document.querySelector("#choice3").textContent=questions[i].answers[3].text;
         document.querySelector("#question-ask").textContent=questions[i].question;   
-        i++;
+
+        if(i === 5){
+            window.alert('Quiz complete. Your score is ' + numCorrect)
+            window.prompt ('Please enter your name for high score')
+    }
     } 
-    )
+)
         button2.addEventListener('click', function(){
         if(questions[i].answers[2].correct){
         window.alert('Correct')
+        i++
         numCorrect++;
         } else  {timeLeft -= 5;
         window.alert('Incorrect') 
+        i++
         }   
         document.querySelector("#choice0").textContent=questions[i].answers[0].text;
         document.querySelector("#choice1").textContent=questions[i].answers[1].text;
         document.querySelector("#choice2").textContent=questions[i].answers[2].text;
         document.querySelector("#choice3").textContent=questions[i].answers[3].text;
         document.querySelector("#question-ask").textContent=questions[i].question;
-        i++
-    } 
+     
+        if(i === 5){
+            window.alert('Quiz complete. Your score is ' + numCorrect)
+            window.prompt ('Please enter your name for high score')
+    }
+        } 
+     
     )
         button3.addEventListener('click', function(){
         if(questions[i].answers[3].correct){
         window.alert('Correct')
+        i++
         numCorrect++;
         } else  {timeLeft -= 5;
         window.alert('Incorrect') 
+        i++
         }   
         document.querySelector("#choice0").textContent=questions[i].answers[0].text;
         document.querySelector("#choice1").textContent=questions[i].answers[1].text;
         document.querySelector("#choice2").textContent=questions[i].answers[2].text;
         document.querySelector("#choice3").textContent=questions[i].answers[3].text;
         document.querySelector("#question-ask").textContent=questions[i].question;
-        i++
-    } 
-    )
+ 
+        if(i === 5){
+            window.alert('Quiz complete. Your score is ' + numCorrect)
+            window.prompt ('Please enter your name for high score')
+    }
+ })
+        
+
+        
+             
+    
 
     console.log('started')
 
@@ -152,5 +183,15 @@ var questions = [
         { text : 'Server',  correct: false},
         { text : 'Both',  correct: true},
         { text : 'Neither', correct: false}]
-    }
+    },
+    {
+        question: '  ', 
+        answers: [
+            { text : ' ',  correct: false},
+            { text : ' ',  correct: false},
+            { text : ' ',  correct: true},
+            { text : ' ', correct: false}]
+        }
+    
+
 ]

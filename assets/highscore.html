@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores</title>
+</head>
+<body>
+    <h1>High Scores!</h1>
+
+    <h2>Name: <span id=highName></span> Score: <span id=highScore></span></h2>
+
+<script>
+    document.getElementById('highScore').innerHTML = localStorage.getItem("score")
+    document.getElementById('highName').innerHTML = localStorage.getItem("username");
+</script>
+
+</body>
+</html>
+
